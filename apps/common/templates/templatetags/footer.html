@@ -1,0 +1,21 @@
+{% load i18n %}
+<div class="center">
+	<div class="foot_menu">
+		<a href="/" class="act">{% trans "Главная" %}</a>
+			<em class="delim_footer">|</em>
+		<a href="/order/online/">{% trans "Онлайн заказ воды" %}</a>
+			<em class="delim_footer">|</em>
+		<a href="/info/">{% trans "Информация" %}</a>
+			<em class="delim_footer">|</em>
+		<a href="/contacts/">{% trans "Контакты" %}</a>
+			<em class="delim_footer">|</em>
+		{% if auth %}
+			<a href="/account/logout">{% trans "Выход" %}</a>
+		{% else %}
+			<a href="/account/login">{% trans "Вход" %}</a>
+		{% endif %}
+	</div>
+	<div class="clear"></div>
+	<span>ООО "Сквид". {% trans "Все права защищены" %}. (с) 2012</span>
+	<a href="mailto:aries.ua@gmail.com">© Aries corp.</a>
+</div>

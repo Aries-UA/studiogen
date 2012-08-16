@@ -1,0 +1,5 @@
+<div id="lang">
+	{% for lang in LANGUAGES %}
+		<a href="#" onclick="setLanguage('{{ lang.0 }}'); return false;" class="alang left" title="{{ lang.1 }}" style="background: url(/static/images/{{ lang.0 }}.png) transparent;"></a>
+	{% endfor %}
+</div>

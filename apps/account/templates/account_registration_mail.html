@@ -1,0 +1,17 @@
+{% load i18n %}
+<html>
+	<body>
+		<div style="width: 600px;">
+			<a href="http://{{ domain }}"><h3>{% trans "Добро пожаловать на сайт Чиста вода" %}</h3></a>
+			<br />
+			<br />
+			<p>{% trans "Спасибо за регистрацию на сайте" %} <a href="http://{{ domain }}">"{% trans "Чиста вода" %}"</a></p>
+			<p>{% trans "Что бы подтвердить регистрацию, перейдите по ссылке" %}:</p>
+			<p><a href="http://{{ domain }}/account/registration/confirm/{{ auth_key }}">http://{{ domain }}/account/registration/confirm/{{ auth_key }}</a></p>
+			<br />
+			<br />
+			<p>{% trans "Если вы не регистрировались на сайте, проигнорируйте это письмо" %}.</p>
+			<p>{% trans "Не пишите на этот емаил, все письма будут проигнорированы" %}.</p>
+		</div>
+	</body>
+</html>

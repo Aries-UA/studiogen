@@ -1,0 +1,17 @@
+{% load i18n %}
+<html>
+	<body>
+		<div style="width: 600px;">
+			<a href="http://{{ domain }}">
+				<h2>{% trans "Чиста вода" %}</h2>
+			</a>
+			<h3>{% trans "Восстановление пароля" %}</h3>
+			<br />
+			<br />
+			<p>{% trans "Ваш новый пароль" %}: {{ new_password }}</p>
+			<br />
+			<br />
+			<p>{% trans "Не пишите на этот емаил, все письма будут проигнорированы" %}.</p>
+		</div>
+	</body>
+</html>
