@@ -127,6 +127,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
+    'apps.common.context_processors.base_layout',
 )
 
 INSTALLED_APPS = (
@@ -145,10 +146,13 @@ INSTALLED_APPS = (
     'apps.account',
     'apps.lang',
     'apps.gallery',
+    'apps.menu',
+    'apps.news',
 )
 
 LANGUAGES = (
     ('ru', u'Русский'),
+    ('en', u'English'),
     ('he', u'Hebrew'),
 )
 

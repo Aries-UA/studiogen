@@ -1,21 +1,33 @@
 {% load i18n %}
-<div class="center">
-	<div class="foot_menu">
-		<a href="/" class="act">{% trans "Главная" %}</a>
-			<em class="delim_footer">|</em>
-		<a href="/order/online/">{% trans "Онлайн заказ воды" %}</a>
-			<em class="delim_footer">|</em>
-		<a href="/info/">{% trans "Информация" %}</a>
-			<em class="delim_footer">|</em>
-		<a href="/contacts/">{% trans "Контакты" %}</a>
-			<em class="delim_footer">|</em>
-		{% if auth %}
-			<a href="/account/logout">{% trans "Выход" %}</a>
-		{% else %}
-			<a href="/account/login">{% trans "Вход" %}</a>
-		{% endif %}
-	</div>
-	<div class="clear"></div>
-	<span>ООО "Сквид". {% trans "Все права защищены" %}. (с) 2012</span>
-	<a href="mailto:aries.ua@gmail.com">© Aries corp.</a>
+<div id="footer">
+    <div class="bg_footer left">
+        <a href="#"><img src="{{ STATIC_URL }}images/footer_logo.png" alt="" /></a>
+    </div>
+    <div class="footer_text right">
+        <table class="left">
+            <tr>
+                <td class="f1">
+                    <h3>{% trans "studio gen" %}</h3>
+                    <span>{% trans "архитектурная студия" %}</span><br />
+                    <span>{% trans "дизайн интерьеров, феншуй" %}</span>
+                </td>
+                <td class="f2">
+                    <span>{% trans "тель авив, 0000" %}</span><br />
+                    <span><b>T</b>&nbsp;03-600-000" %}</span><br />
+                    <span><b>M</b>&nbsp;054-493-0558" %}</span><br />
+                    <span class="email">
+                        <b>E</b>&nbsp;<a href="mailto:mr@studiogen.co.il">mr@studiogen.co.il</a>
+                    </span>
+                </td>
+                <td class="f3">
+                    {% trans "© 2012 Studio Gen, All Rights Reserved. Legal Information" %}
+                </td>
+                <td class="f4">
+                    <a href="#"><img src="{{ STATIC_URL }}images/rss.png" alt="" /></a>
+                    <a href="#"><img src="{{ STATIC_URL }}images/fb.png" alt="" /></a>
+                    <a href="#"><img src="{{ STATIC_URL }}images/tw.png" alt="" /></a>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

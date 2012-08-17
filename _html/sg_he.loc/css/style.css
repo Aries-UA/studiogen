@@ -1,0 +1,356 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #151515;
+    background-color: #cacaca;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+} 
+
+.clear {
+    clear: both; 
+    line-height:0; 
+    font-size:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------ */
+/* ----------- HEADER ----------- */
+/* ------------------------------ */
+
+#header {
+    height: 103px;
+    width: 100%;
+    min-width: 1024px;
+    border-bottom: 4px solid #000000;
+}
+
+#header .logo {
+    padding: 20px 0 0 47px;
+    position: relative;
+} 
+
+#header .lang {
+    position: absolute;
+    top: 90px;
+}
+
+#header .menu ul {
+    list-style: none;
+}
+
+#header .menu {
+    padding: 48px 72px 0 0;
+}
+
+#header .menu ul li {
+    float: left;
+    margin-left: 20px;
+    font-size: 15px;
+    outline: 0;
+    text-transform: uppercase;
+}
+
+#header .menu ul li a {
+    color: #3d4346;
+}
+
+#header .menu ul li a:hover {
+    border-bottom: 4px solid #8c0e35;
+}
+
+/* ------------------------------ */
+/* ----------- FOOTER ----------- */
+/* ------------------------------ */
+
+#footer {
+    position: relative;
+    min-width: 1112px;
+    height: 85px;
+    padding-right: 20px;
+    background: url(../images/bg_footer_line.png) repeat-x;
+    
+}
+
+#footer .bg_footer {
+    height: 100%;
+    width: 280px;
+    background: url(../images/bg_footer.jpg) no-repeat;
+    padding: 14px 0 0 60px;
+}
+
+#footer .footer_text {
+    padding-top: 20px;
+    width: 742;
+    height: 100%;
+}
+
+#footer td {
+    color: #8d9497;
+}
+
+#footer .f2, #footer .f3, #footer .f4, #footer .f4 {
+    padding-left: 20px;
+} 
+
+#footer .f3, #footer .f4 {
+    vertical-align: bottom;
+}
+
+#footer .f1 h3 {
+    padding-bottom: 8px;    
+    text-transform: uppercase;
+    font: bold 13px Arial, Helvetica, sans-serif;
+}
+
+#footer .f1 span, #footer .f2 span, #footer .f3 span {
+    text-transform: uppercase;
+}
+
+#footer .email a {
+    text-transform: lowercase !important;
+    color: #8d9497;
+}
+
+/* ------------------------------ */
+/* ----------- SIDEBAR ---------- */
+/* ------------------------------ */
+
+#sidebar {
+    position: relative;
+    width: 312px;
+    min-height: 500px;
+    font-style: italic;
+}
+
+.div_red {
+    color: #c0c0c0;
+}
+
+.div_gray {
+    color: #ffffff;
+}
+
+.div_transp {
+    color: #ffffff;
+}
+
+#sidebar .dotline {
+    position: absolute;
+    top: 0px;
+    left: 246px;
+    width: 1px;
+    height: 100%;
+    border-left: 2px dotted #807b7c;
+}
+
+#sidebar h1 {
+    text-transform: uppercase;
+    padding: 168px 0 20px 40px;
+    font: 37px Arial, Helvetica, sans-serif;
+}
+
+#sidebar.div_gray h1 {
+    color: #4d5457 !important;
+}
+
+.sidebar_block {
+    width: 227px;
+    min-height: 148px;
+    padding-top: 20px; 
+    padding-right: 85px;
+    text-align: right;
+}
+
+.sidebar_block h2 {
+    text-transform: uppercase;
+    font: 18px Arial, Helvetica, sans-serif;
+    padding-bottom: 12px;
+}
+
+.sidebar_block p {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.sidebar_block div.bottom_line {
+    padding-bottom: 20px;
+}
+
+.block_red {
+    background-color: #431313;
+}
+
+.block_gray {
+    background-color: #aeb0b1;
+}
+
+.block_transp {
+    background-color: transparent;
+}
+
+/* ------------------------------ */
+/* -------- CONTENT_BODY -------- */
+/* ------------------------------ */
+
+#content_body {
+    min-width: 1043px;
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+}
+
+.bg1 {
+    background: url(../images/bg/bg1.jpg) 100% 100% no-repeat;
+}
+.bg2 {
+    background: url(../images/bg/bg2.jpg) 100% 100% no-repeat;
+}
+.bg3 {
+    background: url(../images/bg/bg3.jpg) 100% 100% no-repeat;
+}
+.bg4 {
+    background: url(../images/bg/bg4.jpg) 100% 100% no-repeat;
+}
+
+/* ------------------------------ */
+/* ----------- CONTENT ---------- */
+/* ------------------------------ */
+
+#content {
+    padding: 20px;
+    color: #c0c0c0;
+}
+
+#content.gray {
+    min-height: 460px;
+}
+
+#content.gray table {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0 0;
+}
+
+#content.gray table tr td {
+    vertical-align: bottom;
+    width: 100%;
+    height: 460px;
+}
+
+.full {
+    width: 100% !important;
+    min-width: 100% !important;
+    padding: 0px !important;
+}
+
+.content_bottom {
+    color: #4d5457;
+    width: 320px;
+}
+
+.content_bottom h1 {
+    color: #f1f1f1;
+    font-size: 16px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* ------------------------------ */
+/* --------- BLACK_BLOCK -------- */
+/* ------------------------------ */
+
+.black_block {
+    width: 125px;
+    padding: 20px;
+    margin-right: 45px;
+    background-color: #090908;
+    color: #efefef;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 40px;
+    border: 1px solid #c3c43a;
+}
+
+.black_block h1 {
+    text-transform: uppercase;
+    font: 18px Arial, Helvetica, sans-serif;
+    color: #c3c43a;
+}
+
+.black_block_line {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* ------------------------------ */
+/* ----------- GALLERY ---------- */
+/* ------------------------------ */
+
+#div_img {
+    padding-top: 20px;
+    width: 532px;
+}
+
+#div_img img {
+    border: 13px solid #79060d;
+    max-width: 100%; 
+    height: auto;
+}
+
+.thumbs {
+    padding: 33px 0 0 26px;
+}
+
+.thumbs img {
+    display: block;
+    padding-bottom: 18px;
+    padding-left: 30px;
+}
+
+.text_footer {
+    width: 560px;
+    color: #ffffff;
+    font-size: 10px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.text_footer h2 {
+    padding-bottom: 14px;
+}
+
+/* ------------------------------ */
+/* ----------- INPUTS ----------- */
+/* ------------------------------ */
+
+textarea, input[type="text"], select {
+    background: #E6E6E6;
+    border: none;
+    padding: 2px;
+    color: #3D4346;
+    font: italic 12px Arial;
+}
+
+textarea {
+    width: 194px;
+    height: 108px;
+}
+

@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 def index(request):
     request.HEAD.setHead('/home/')
+    print request.HEAD.content
     data = {
-        'content': request.HEAD.content,
+        'html': request.HEAD.content,
     }
     return render(request, 'common_index.html', data)

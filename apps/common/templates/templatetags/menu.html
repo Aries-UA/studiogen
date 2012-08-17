@@ -1,20 +1,9 @@
+{% load element_tags %}
 {% load i18n %}
-<a href="/">{% trans "Главная" %}</a>
-<span class="menu_{{ reg }}"></span>
-<a href="/order/online/">{% trans "Онлайн заказ воды" %}</a>
-<span class="menu_{{ reg }}"></span>
-<a href="/stock/">{% trans "Акции" %}<img src="/static/images/zvezda.png" class="stock" alt="" /></a>
-<span class="menu_{{ reg }}"></span>
-<a href="/info/">{% trans "Информация" %}</a>
-<span class="menu_{{ reg }}"></span>
-<a href="/contacts/">{% trans "Контакты" %}</a>
-<span class="menu_{{ reg }}"></span>
-{% if auth %}
-	<a href="/order/orders/">{% trans "Заказы" %}</a>
-	<span class="menu_{{ reg }}"></span>
-	<a href="/account/profile">{% trans "Профиль" %}</a>
-	<span class="menu_{{ reg }}"></span>
-	<a href="/account/logout">{% trans "Выход" %}</a>
-{% else %}
-	<a href="/account/login">{% trans "Вход" %}</a>
-{% endif %}
+<div class="menu {{ 'right'|style }}">
+    <ul>
+        {% for menu in menus %}
+            <li><a href="{{ menu.url }}">{{ menu.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
