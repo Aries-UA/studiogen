@@ -97,13 +97,13 @@ var slide = {
     }
 };
 
-$(document).ready(function(){
-	$(".gallery").click(function() {
-		var path_img = $(this).attr('href');
-		$('#big_picture img').attr('src', path_img);
-		return false;
-	});
+var gallery = {
+    set: function(img) {
+        $('#big_picture').attr('src', img);
+    }
+};
 
+$(document).ready(function(){
 	if ($("#content div.fengshui_bg").length >0) {
   		$('.fengshui_bg').bgStretcher({
 			images:["/images/fengshui-bg.jpg"],

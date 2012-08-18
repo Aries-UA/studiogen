@@ -6,6 +6,8 @@ import cPickle as pickle
 from PIL import Image
 from math import floor
 
+from settings import IMAGE_SIZE
+
 class BaseImg(object):
 
     w = 300
@@ -132,6 +134,9 @@ class CropImg(BaseImg):
         except IOError, e:
             self.error = e
 
+    def __del__(self):
+        self.img = None
+
     def getOriginSize(self):
         try:
             dpi = self.img.info['dpi']
@@ -196,3 +201,13 @@ class CropImg(BaseImg):
         if not orig_mode == 'L':
             self.img = self.img.convert('L')
         self.img.convert('1')
+
+def get_image_admin_prefix():
+    for s in IMAGE_SIZE:
+        if s['preview_admin']:
+            return 'x'.join([str(s['w']), str(s['h'])])
+
+def get_image_name(image_name):
+    data = image_name.split('/')
+    name = data[data.__len__() - 1]
+    return name[0:name.__len__()-4]

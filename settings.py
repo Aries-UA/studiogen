@@ -171,14 +171,14 @@ AUTH_PROFILE_MODULE = 'apps.account.UserProfile'
 DEFAULT_REDIRECT = 'apps.common.views.index'
 
 NAME_GALLERY = 'gallery/'
-NAME_THUMBS_GALLERY = 'thumbs/'
 
 PATH_GALLERY = ''.join([MEDIA_ROOT, NAME_GALLERY])
 
-PATH_GALLERY_THUMBS = ''.join([MEDIA_ROOT, NAME_THUMBS_GALLERY, NAME_GALLERY])
-
-THUMB_W = 140
-THUMB_H = 100
+IMAGE_SIZE = [
+    {'w': 140, 'h': 100, 'crop': True, 'preview_admin': True},
+    {'w': 103, 'h': 62, 'crop': True, 'preview_admin': False},
+    {'w': 600, 'h': 400, 'crop': False, 'preview_admin': False},
+]
 
 EMAIL_FROM = 'aries.ua@gmail.com'
 

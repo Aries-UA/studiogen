@@ -30,8 +30,9 @@ class GalleryAdmin(admin.ModelAdmin):
         (u'Изображение', {'fields': ('img',)}),
         (u'Описание', {'fields': ('name', 'descr')}),
     )
-    list_display = ('preview_image_url', 'name', 'descr', 'sort_order')
+    list_display = ('preview_image_url', 'name', 'album', 'descr', 'sort_order')
     list_display_links = ('preview_image_url', 'name')
+    ordering = ('album', 'sort_order')
 
 
 class TranslatedAlbumsAdmin(AlbumsAdmin, TranslationAdmin):
