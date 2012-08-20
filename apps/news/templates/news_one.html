@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <div id="content_body" class="bg4">
+        <div id="sidebar" class="div_transp left">
+            <div class="dotline right"></div>
+            <h1>{% trans "новости" %}</h1>
+            <div class="sidebar_block block_transp">
+                <div class="bottom_line"></div>
+            </div>
+        </div>
+        <div id="content" class="left">
+            <div class="news">
+                <div class="title">
+                    {{ one.title }}
+                </div>
+                <div class="created">
+                    {{ one.created }}
+                </div>
+                <div class="preview">
+                    {{ one.content }}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+{% endblock %}

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from django.conf.urls.defaults import patterns
+from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('',
     (r'^news/$', 'apps.news.views.news'),
-    (r'^news/(?P<news_id>[0-9]+)$', 'apps.news.views.one_news'),
+    url(r'^news/(?P<news_id>[0-9]+)/$', 'apps.news.views.one_news', name='one_news'),
 )

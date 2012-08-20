@@ -117,6 +117,8 @@ TEMPLATE_DIRS = (
     ''.join([PATH_PJT, '/apps/common/templates']),
     ''.join([PATH_PJT, '/apps/account/templates']),
     ''.join([PATH_PJT, '/apps/gallery/templates']),
+    ''.join([PATH_PJT, '/apps/news/templates']),
+    ''.join([PATH_PJT, '/apps/contactus/templates']),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -148,6 +150,7 @@ INSTALLED_APPS = (
     'apps.gallery',
     'apps.menu',
     'apps.news',
+    'apps.contactus',
 )
 
 LANGUAGES = (

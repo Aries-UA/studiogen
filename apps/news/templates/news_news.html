@@ -11,17 +11,21 @@
             </div>
         </div>
         <div id="content" class="left">
-            <div class="gallery">
-                <div id="div_img" class="left">
-                    <img id="big_picture" src="images/big_gallery.jpg" alt="" />
+            {% for one in news %}
+                <div class="news">
+                    <div class="title">
+                        <a href="{% url one_news news_id=one.id %}">{{ one.title }}</a>
+                    </div>
+                    <div class="created">
+                        {{ one.created }}
+                    </div>
+                    <div class="preview">
+                        {{ one.short_name }}
+                        <br />
+                        <a href="{% url one_news news_id=one.id %}">{% trans "Далее" %}...</a>
+                    </div>
                 </div>
-                <div class="thumbs left">
-                    <img src="images/thumb_gallery.jpg" alt="" />
-                    <img src="images/thumb_gallery.jpg" alt="" />
-                    <img src="images/thumb_gallery.jpg" alt="" />
-                    <img src="images/thumb_gallery.jpg" alt="" />
-                </div>
-            </div>
+            {% endfor %}
             <div class="clear"></div>
         </div>
         <div class="clear"></div>
