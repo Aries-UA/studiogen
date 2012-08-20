@@ -6,6 +6,7 @@ from django.forms.util import ErrorList
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
+from captcha.fields import CaptchaField
 
 from settings import *
 
@@ -54,6 +55,7 @@ class ContactForm(BaseForm):
     email = forms.EmailField(label=_(u'Email'), min_length=3, max_length=100, required=True, initial='')
     title = forms.CharField(label=_(u"Тема"), min_length=5, max_length=100, required=True, initial='')
     message = forms.CharField(label=_(u"Сообщение"), widget=forms.Textarea, min_length=5, max_length=500, required=True, initial='')
+    captcha = CaptchaField()
 
     def clean_title(self):
         name = self.cleaned_data['title']

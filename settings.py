@@ -143,6 +143,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.sitemaps',
     'modeltranslation',
+    'captcha',
     'apps.flatpages',
     'apps.common',
     'apps.account',
