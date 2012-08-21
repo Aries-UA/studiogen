@@ -1,0 +1,29 @@
+#header .logo {
+    padding: 20px 47px 0 0 !important;
+}
+
+.black_block {
+    margin-right: 0px !important;
+    margin-left: 45px !important;
+}
+
+#header .menu {
+    padding: 48px 0 0 72px !important;
+}
+
+#sidebar h1 {
+    padding: 168px 0 20px 85px !important;
+}
+
+#sidebar .dotline {
+    left: 66px !important;
+}
+
+.sidebar_block {
+    padding-left: 85px !important;
+    text-align: left !important;
+}
+
+.content_bottom {
+    text-align: right;
+}
