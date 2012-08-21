@@ -7,4 +7,4 @@ from django.utils import simplejson
 
 def set_language(request):
     lang.change(request)
-    return HttpResponse(simplejson.dumps({'error':0,}))
+    return HttpResponse(simplejson.dumps({'error': 0,}))

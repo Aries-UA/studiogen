@@ -22,22 +22,6 @@ jQuery.fn.my_tooltip = function(options) {
     });
 };
 
-var lng = {
-    go: function(url) {
-        document.location = url;
-    },
-    set: function(lang) {
-        var url = document.location.href;
-        if (lang == 'ru') {
-            url = url.replace('/he/', '/ru/');
-        }
-        if (lang == 'he') {
-            url = url.replace('/ru/', '/he/');
-        }
-        this.go(url);
-    }
-};
-
 var cf = {
     names: [],
     set: function(obj) {
@@ -100,6 +84,25 @@ var slide = {
 var gallery = {
     set: function(img) {
         $('#big_picture').attr('src', img);
+    }
+};
+
+var LANG = {
+    set: function (ln) {
+        jQuery.ajax({
+            type: 'get',
+            url: '/language/set/?ln='+ln,
+            data: '',
+            dataType: 'json',
+            success: function(data, status) {
+                if (data.error == 0) {
+                    document.location = document.location;
+                }
+            },
+            error: function(data, status, e) {
+                alert(e);
+            }
+        });
     }
 };
 
