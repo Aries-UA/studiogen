@@ -415,3 +415,24 @@ textarea {
     display: block;
     margin-top: 4px;
 }
+
+.div_tooltip .tp {
+    position: relative;
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #7F7F7F;
+    left: 50px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+    color: #1A1A1A;
+}
+.tooltip span {
+    display: block;
+    width: 200px;
+}
