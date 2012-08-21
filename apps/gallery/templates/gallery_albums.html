@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load element_tags %}
 {% load i18n %}
 
 {% block content %}
 	<div id="content_body" class="bg4">
-	    <div id="sidebar" class="div_transp left">
+	    <div id="sidebar" class="div_transp {{ 'left'|style }}">
 	        <div class="dotline right"></div>
 	        <h1>{% trans "галерея" %}</h1>
 	        <div class="sidebar_block block_transp">
@@ -15,7 +16,7 @@
 	            <div class="bottom_line"></div>
 	        </div>
 	    </div>
-	    <div id="content" class="left">
+	    <div id="content" class="{{ 'left'|style }}">
 	        <div class="gallery">
 	            <div id="div_img" class="left">
 	            	{% if big %}
