@@ -3,14 +3,14 @@
 
 {% block content %}
     <div id="content_body" class="bg1">
-        <div id="sidebar" class="div_transp left">
+        <div id="sidebar" class="div_transp {{ 'left'|style }}">
             <div class="dotline right"></div>
             <h1>{% trans "новости" %}</h1>
             <div class="sidebar_block block_transp">
                 <div class="bottom_line"></div>
             </div>
         </div>
-        <div id="content" class="left">
+        <div id="content" class="{{ 'left'|style }}">
             <div class="news">
                 <div class="title">
                     {{ one.title }}
