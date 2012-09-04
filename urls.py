@@ -17,5 +17,6 @@ urlpatterns = patterns('',
     url(r'^captcha/', include('captcha.urls')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/media/favicon.ico')),
+    (r'^ckeditor/', include('ckeditor.urls')),
     (r'^admin/', include(admin.site.urls)),
 )

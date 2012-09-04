@@ -5,7 +5,8 @@ from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
 from apps.flatpages.models import FlatPage
 from django.utils.translation import ugettext_lazy as _
-from apps.common.widgets import CKEditorAdmin
+from ckeditor.widgets import CKEditorWidget
+
 
 class FlatpageForm(forms.ModelForm):
     url = forms.RegexField(label=_("URL"), max_length=100, regex=r'^[-\w/\.~]+$',
@@ -17,10 +18,10 @@ class FlatpageForm(forms.ModelForm):
     class Meta:
         model = FlatPage
         widgets = {
-            'content_ru': CKEditorAdmin(),
-            'content_en': CKEditorAdmin(),
-            'content_he': CKEditorAdmin(),
-            'content_ua': CKEditorAdmin(),
+            'content_ru': CKEditorWidget(),
+            'content_en': CKEditorWidget(),
+            'content_he': CKEditorWidget(),
+            'content_ua': CKEditorWidget(),
         }
 
 

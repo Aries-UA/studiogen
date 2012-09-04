@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'modeltranslation',
     'captcha',
+    'ckeditor',
     'apps.flatpages',
     'apps.common',
     'apps.account',
@@ -184,6 +185,8 @@ IMAGE_SIZE = [
 ]
 
 EMAIL_FROM = 'aries.ua@gmail.com'
+
+CKEDITOR_UPLOAD_PATH = '/home/projects/media/images'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

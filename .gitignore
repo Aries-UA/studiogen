@@ -2,3 +2,4 @@
 local_settings.py
 /logs/*
 /media/gallery/*
+/media/images/*
