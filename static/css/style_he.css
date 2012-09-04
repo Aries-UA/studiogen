@@ -11,6 +11,9 @@
     padding: 48px 0 0 72px !important;
 }
 
+#header .menu ul li {
+    font-size: 20px;
+}
 #sidebar h1 {
     padding: 168px 0 20px 85px !important;
 }
