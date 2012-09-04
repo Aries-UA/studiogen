@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-	<div id="content_body" class="bg4">
+	<div id="content_body" class="bg1">
 	    <div id="sidebar" class="div_transp {{ 'left'|style }}">
 	        <div class="dotline right"></div>
 	        <h1>{% trans "галерея" %}</h1>
@@ -24,11 +24,15 @@
 	                {% endif %}
 	            </div>
 	            <div class="thumbs left">
+	            	<ul id="mycarousel" class="jcarousel-skin-tango">
 	            	{% for g in gallery %}
-	                	<a href="javascript: void(0)" onclick="gallery.set('{{ g.original }}')">
-	                		<img src="{{ g.thumb }}" alt="" />
-	                	</a>
+	            		<li>
+		                	<a href="javascript: void(0)" onclick="gallery.set('{{ g.original }}')">
+		                		<img src="{{ g.thumb }}" alt="" />
+		                	</a>
+	                	</li>
 	                {% endfor %}
+	            	</ul>
 	            </div>
 	        </div>
 	        <div class="clear"></div>
@@ -38,4 +42,13 @@
 	    </div>
 	    <div class="clear"></div>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#mycarousel').jcarousel({
+				wrap: 'circular',
+				scroll: 2,
+				vertical: true
+			});
+		});
+	</script>
 {% endblock %}

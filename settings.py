@@ -156,7 +156,6 @@ INSTALLED_APPS = (
 
 LANGUAGES = (
     ('ru', u'Русский'),
-    ('en', u'English'),
     ('he', u'Hebrew'),
 )
 

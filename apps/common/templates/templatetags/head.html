@@ -9,11 +9,13 @@
 <base href="http://{{ domain }}" />
 
 <link type="text/css" href="{{ STATIC_URL }}css/style.css" rel="stylesheet" />
+<link type="text/css" href="{{ STATIC_URL }}css/skin.css" rel="stylesheet" />
 {% if LANGUAGE_CODE == 'he' %}
     <link type="text/css" href="{{ STATIC_URL }}css/style_he.css" rel="stylesheet" />
 {% endif %}
 {% block css %}{% endblock %}
 
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.jcarousel.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
 {% block js %}{% endblock %}

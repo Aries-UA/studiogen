@@ -48,7 +48,7 @@ a {
 
 #header .lang {
     position: absolute;
-    top: 90px;
+    top: 72px;
 }
 
 #header .menu ul {
@@ -319,13 +319,13 @@ a {
 }
 
 .thumbs {
-    padding: 33px 0 0 26px;
+    padding: 21px 0 0 50px;
 }
 
 .thumbs img {
     display: block;
-    padding-bottom: 18px;
-    padding-left: 30px;
+    /*padding-bottom: 18px;
+    padding-left: 30px;*/
 }
 
 .text_footer {
@@ -365,13 +365,13 @@ textarea {
     width: 600px;
     min-width: 600px;
     color: #ffffff;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .news .title {
     text-transform: uppercase;
     font-size: 14px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
 }
 
 .news .title a {
@@ -380,7 +380,7 @@ textarea {
 
 .news .created {
     font-size: 10px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
 .news .preview a {
