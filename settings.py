@@ -160,7 +160,7 @@ LANGUAGES = (
     ('he', u'Hebrew'),
 )
 
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'he'
 MODELTRANSLATION_TRANSLATION_REGISTRY = "apps.lang.translation"
 
 #python -m smtpd -n -c DebuggingServer localhost:1025
