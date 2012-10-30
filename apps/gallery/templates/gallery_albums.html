@@ -18,12 +18,12 @@
 	    </div>
 	    <div id="content" class="{{ 'left'|style }}">
 	        <div class="gallery">
-	            <div id="div_img" class="left">
+	            <div id="div_img">
 	            	{% if big %}
 	                	<img id="big_picture" src="{{ big.original }}" alt="" />
 	                {% endif %}
 	            </div>
-	            <div class="thumbs left">
+	            <div class="thumbs">
 	            	<ul id="mycarousel" class="jcarousel-skin-tango">
 	            	{% for g in gallery %}
 	            		<li>
@@ -37,7 +37,7 @@
 	        </div>
 	        <div class="clear"></div>
 	        <div class="text_footer">
-	            {{ html|safe }}
+	            {#{ html|safe }#}
 	        </div>
 	    </div>
 	    <div class="clear"></div>
@@ -46,8 +46,8 @@
 		$(document).ready(function() {
 			$('#mycarousel').jcarousel({
 				wrap: 'circular',
-				scroll: 4,
-				vertical: true
+				scroll: 2,
+				auto: 3
 			});
 		});
 	</script>

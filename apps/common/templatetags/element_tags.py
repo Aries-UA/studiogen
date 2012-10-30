@@ -32,8 +32,12 @@ def menu():
 		menus = Menu.objects.all()
 	else:
 		menus = Menu.objects.all().order_by('-sort_order')
+	td_width = 1
+	if len(menus) > 0:
+		td_width = int(99.99 / len(menus))
 	return {
 		'menus': menus,
+		'td_width': td_width,
 		'LANGUAGE_CODE': get_code(),
 	}
 

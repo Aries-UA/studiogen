@@ -131,5 +131,6 @@ $(document).ready(function(){
 
 function show_img_big(item) {
 	//console.log(item);
+    ///
 }
 
