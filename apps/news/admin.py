@@ -3,12 +3,18 @@
 from django import forms
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
+from apps.common.widgets import AdminImageFileWidget
 from apps.news.models import News
 
 class NewsForm(forms.ModelForm):
 
     class Meta:
         model = News
+        widgets = {
+            'img1': AdminImageFileWidget(),
+            'img2': AdminImageFileWidget(),
+            'img3': AdminImageFileWidget(),
+        }
 
 
 class NewsAdmin(admin.ModelAdmin):

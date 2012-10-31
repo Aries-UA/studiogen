@@ -175,6 +175,7 @@ AUTH_PROFILE_MODULE = 'apps.account.UserProfile'
 DEFAULT_REDIRECT = 'apps.common.views.index'
 
 NAME_GALLERY = 'gallery/'
+NAME_NEWS = 'news/'
 
 PATH_GALLERY = ''.join([MEDIA_ROOT, NAME_GALLERY])
 

@@ -14,21 +14,53 @@
         <div id="content" class="{{ 'left'|style }}">
             {% for one in news %}
                 <div class="news">
-                    <div class="title">
-                        <a href="{% url one_news news_id=one.id %}">{{ one.title }}</a>
+                    <div class="{{ 'left'|style }}" style="margin-top: 3px;">
+                        <script type="text/javascript">
+                            Imgs.add('{{ one.id }}');
+                        </script>
+                        <div id="img1_{{ one.id }}" class="left" style="">
+                            <a href="{{ one.original1 }}" class="fancybox">
+                                <img src="{{ one.thumb1 }}" class="left" alt="" title="" />
+                            </a>
+                        </div>
+                        <div id="img2_{{ one.id }}" class="left" style="display: none;">
+                            <a href="{{ one.original2 }}" class="fancybox">
+                                <img id="img2_1" src="{{ one.thumb2 }}" class="left" alt="" title="" />
+                            </a>
+                        </div>
+                        <div id="img3_{{ one.id }}" class="left" style="display: none;">
+                            <a href="{{ one.original3 }}" class="fancybox">
+                                <img id="img3_1" src="{{ one.thumb3 }}" class="left" alt="" title="" />
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                        <script type="text/javascript">
+                            Imgs.go('{{ one.id }}');
+                        </script>
                     </div>
-                    <div class="created">
-                        {{ one.created }}
+                    <div class="{{ 'left'|style }}" style="width: 480px; padding-{{ 'left'|style }}: 14px;">
+                        <div class="title">
+                            <a href="{% url one_news news_id=one.id %}">{{ one.title }}</a>
+                        </div>
+                        <div class="created">
+                            {{ one.created }}
+                        </div>
+                        <div class="preview">
+                            {{ one.short_name }}
+                            <br />
+                            <a href="{% url one_news news_id=one.id %}">{% trans "Далее" %}...</a>
+                        </div>
                     </div>
-                    <div class="preview">
-                        {{ one.short_name }}
-                        <br />
-                        <a href="{% url one_news news_id=one.id %}">{% trans "Далее" %}...</a>
-                    </div>
+                    <div class="clear"></div>
                 </div>
             {% endfor %}
             <div class="clear"></div>
         </div>
         <div class="clear"></div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.fancybox").fancybox();
+        });
+    </script>
 {% endblock %}

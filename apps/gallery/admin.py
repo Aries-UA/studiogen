@@ -4,6 +4,7 @@ from django import forms
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
 from apps.gallery.models import Albums, Gallery
+from apps.common.widgets import AdminImageFileWidget
 
 class AlbumsForm(forms.ModelForm):
 
@@ -15,6 +16,9 @@ class GalleryForm(forms.ModelForm):
 
     class Meta:
         model = Gallery
+        widgets = {
+            'img': AdminImageFileWidget(),
+        }
 
 
 class AlbumsAdmin(admin.ModelAdmin):
@@ -26,8 +30,8 @@ class AlbumsAdmin(admin.ModelAdmin):
 class GalleryAdmin(admin.ModelAdmin):
     form = GalleryForm
     fieldsets = (
-        (u'Альбом', {'fields': ('album',)}),
         (u'Изображение', {'fields': ('img',)}),
+        (u'Альбом', {'fields': ('album',)}),
         (u'Описание', {'fields': ('name', 'descr')}),
     )
     list_display = ('preview_image_url', 'name', 'album', 'descr', 'sort_order')

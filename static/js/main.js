@@ -106,6 +106,29 @@ var LANG = {
     }
 };
 
+var Imgs = {
+    images: {},
+    add: function(id) {
+        this.images[id] = 2;
+    },
+    view: function(id) {
+        var f = 1000;
+        $('#img1_'+id).hide();
+        $('#img2_'+id).hide();
+        $('#img3_'+id).hide();
+        $('#img'+Imgs.images[id]+'_'+id).fadeIn(f);
+        if (Imgs.images[id] < 3) {
+            Imgs.images[id]++;
+        }
+        else {
+            Imgs.images[id] = 1;
+        }
+    },
+    go: function(id) {
+        setInterval('Imgs.view("'+id+'")', 3000);
+    }
+}
+
 $(document).ready(function(){
 	if ($("#content div.fengshui_bg").length >0) {
   		$('.fengshui_bg').bgStretcher({

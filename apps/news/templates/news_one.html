@@ -13,18 +13,50 @@
         </div>
         <div id="content" class="{{ 'left'|style }}">
             <div class="news">
-                <div class="title">
-                    {{ one.title }}
+                <div class="{{ 'left'|style }}" style="margin-top: 3px;">
+                    <script type="text/javascript">
+                        Imgs.add('1');
+                    </script>
+                    <div id="img1_1" class="left" style="">
+                        <a href="{{ one.original1 }}" class="fancybox">
+                            <img src="{{ one.thumb1 }}" class="left" alt="" title="" />
+                        </a>
+                    </div>
+                    <div id="img2_1" class="left" style="display: none;">
+                        <a href="{{ one.original2 }}" class="fancybox">
+                            <img id="img2_1" src="{{ one.thumb2 }}" class="left" alt="" title="" />
+                        </a>
+                    </div>
+                    <div id="img3_1" class="left" style="display: none;">
+                        <a href="{{ one.original3 }}" class="fancybox">
+                            <img id="img3_1" src="{{ one.thumb3 }}" class="left" alt="" title="" />
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                    <script type="text/javascript">
+                        Imgs.go('1');
+                    </script>
                 </div>
-                <div class="created">
-                    {{ one.created }}
+                <div class="{{ 'left'|style }}" style="width: 480px; padding-{{ 'left'|style }}: 14px;">
+                    <div class="title">
+                        {{ one.title }}
+                    </div>
+                    <div class="created">
+                        {{ one.created }}
+                    </div>
+                    <div class="preview">
+                        {{ one.content }}
+                    </div>
                 </div>
-                <div class="preview">
-                    {{ one.content }}
-                </div>
+                <div class="clear"></div>
             </div>
             <div class="clear"></div>
         </div>
         <div class="clear"></div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.fancybox").fancybox();
+        });
+    </script>
 {% endblock %}
