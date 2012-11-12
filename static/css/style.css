@@ -65,6 +65,7 @@ a {
     margin-left: 20px;
     font-size: 18px;
     text-transform: uppercase;
+    min-width: 110px;
 }
 
 #header .menu td a {
