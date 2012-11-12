@@ -57,6 +57,8 @@ a {
 
 #header .menu {
     padding: 48px 72px 0 26px;
+    min-width: 940px;
+    width: 80%;
 }
 
 #header .menu td {
@@ -218,6 +220,7 @@ a {
     position: relative;
     background-position: top center;
     background-size: cover;
+    font-size: 14px;
 }
 
 .bg1 {
