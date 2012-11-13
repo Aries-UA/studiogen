@@ -48,7 +48,12 @@ a {
 
 #header .lang {
     position: absolute;
-    top: 72px;
+    top: 84px;
+    color: #cc6666;
+}
+
+#header .lang a {
+    color: #cc6666;
 }
 
 /*#header .menu ul {
