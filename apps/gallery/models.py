@@ -57,6 +57,9 @@ class Gallery(models.Model):
     def original(self):
         name = get_image_name(self.img.name)
         name = (self.img.name).replace(name, '_'.join([name, '740x494']))
+        if not os.path.isfile(name):
+            name = get_image_name(self.img.name)
+            name = (self.img.name).replace(name, '_'.join([name, '600x400']))
         return '{0}{1}'.format(MEDIA_URL, name)
 
     def thumb(self):
