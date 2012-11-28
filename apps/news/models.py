@@ -47,10 +47,12 @@ class News(models.Model):
         verbose_name_plural = _(u'Новости')
         ordering = ('-created',)
 
+    """
     def original(self):
         name = get_image_name(self.img1.name)
         name = (self.img1.name).replace(name, '_'.join([name, '600x400']))
         return '{0}{1}'.format(MEDIA_URL, name)
+    """
 
     """ ВПАДЛУ ПИСАТЬ КОД - ТУПО КОПИРНУЛ!!! """
     def thumb(self, img):
@@ -58,7 +60,7 @@ class News(models.Model):
             return ''
         else:
             name = get_image_name(img.name)
-            name = (img.name).replace(name, '_'.join([name, '103x62']))
+            name = (img.name).replace(name, '_'.join([name, '250x150']))
             return '{0}{1}'.format(MEDIA_URL, name)
 
     def original(self, img):
@@ -66,7 +68,7 @@ class News(models.Model):
             return ''
         else:
             name = get_image_name(img.name)
-            name = (img.name).replace(name, '_'.join([name, '600x400']))
+            name = (img.name).replace(name, '_'.join([name, '740x494']))
             return '{0}{1}'.format(MEDIA_URL, name)
 
     """ Да бля знаю что не правильно!!! Впадлу же!!! """

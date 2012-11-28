@@ -38,7 +38,8 @@ a {
     height: 103px;
     width: 100%;
     min-width: 1245px;
-    border-bottom: 4px solid #000000;
+    border-bottom: 4px solid #6d6d6d;
+    background: #000000;
 }
 
 #header .logo {
@@ -49,11 +50,11 @@ a {
 #header .lang {
     position: absolute;
     top: 84px;
-    color: #cc6666;
+    color: #8000FF;
 }
 
 #header .lang a {
-    color: #cc6666;
+    color: #8000FF;
 }
 
 /*#header .menu ul {
@@ -75,7 +76,8 @@ a {
 
 #header .menu td a {
     /*color: #3d4346;*/
-    color: #000000;
+    /*color: #000000;*/
+    color: #8000FF;
 }
 
 #header .menu td a:hover {
@@ -96,9 +98,9 @@ a {
 }
 
 #footer .bg_footer {
-    height: 100%;
     width: 280px;
-    background: url(../images/bg_footer.jpg) no-repeat;
+    /* background: url(../images/bg_footer.jpg) no-repeat; */
+    background: #000000;
     padding: 14px 0 0 60px;
 }
 
@@ -110,7 +112,7 @@ a {
 
 #footer td {
     /*color: #8d9497;*/
-    color: #000000;
+    color: #8000FF;
 }
 
 #footer .f2, #footer .f3, #footer .f4, #footer .f4, #footer .f5 {
@@ -134,7 +136,7 @@ a {
 #footer .email a {
     text-transform: lowercase !important;
     /*color: #8d9497;*/
-    color: #000000;
+    color: #8000FF;
 }
 
 /* ------------------------------ */
@@ -221,8 +223,16 @@ a {
 /* -------- CONTENT_BODY -------- */
 /* ------------------------------ */
 
+.slidebox {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-position: top center;
+    background-size: cover;
+}
+
 #content_body {
-    min-width: 1043px;
+    min-width: 1150px;
     position: relative;
     background-position: top center;
     background-size: cover;
@@ -300,9 +310,11 @@ a {
     color: #efefef;
     text-align: left;
     line-height: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     border: 1px solid #c3c43a;
     font-size: 14px;
+    position: relative;
+    z-index: 10000;
 }
 
 .black_block h1 {
@@ -319,23 +331,24 @@ a {
     width: 100%;
 }
 
+
 /* ------------------------------ */
 /* ----------- GALLERY ---------- */
 /* ------------------------------ */
 
 #div_img {
     padding-top: 20px;
-    width: 532px;
+    width: 750px;
 }
 
 #div_img img {
-    border: 13px solid #79060d;
+    /*border: 13px solid #79060d;*/
     max-width: 100%; 
     height: auto;
 }
 
 .thumbs {
-    padding: 18px 0 0 22px;
+    padding: 18px 0 0 0;
     width: 532px;
 }
 
@@ -379,7 +392,7 @@ textarea {
 /* ------------------------------ */
 
 .news {
-    width: 600px;
+    width: 750px;
     min-width: 600px;
     color: #ffffff;
     margin-bottom: 20px;

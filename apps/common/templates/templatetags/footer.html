@@ -6,23 +6,40 @@
     <div class="footer_text right">
         <table class="left">
             <tr>
-                <td class="f1">
-                    <span>{% trans "архитектурная студия" %}</span><br />
-                    <span>{% trans "дизайн интерьеров, феншуй" %}</span>
-                </td>
-                <td class="f2">
-                    <span>054-493-0558</span><br />
-                    <span class="email">
-                        <a href="mailto:mr@studiogen.co.il">mr@studiogen.co.il</a>
-                    </span>
-                </td>
-                <td class="f3">
-                    {% trans "© 2012 Studio Gen, All Rights Reserved. Legal Information" %}
-                </td>
-                <td class="f4">
-                    <a href="#"><img src="{{ STATIC_URL }}images/fb.png" alt="" /></a>
-                    <a href="#"><img src="{{ STATIC_URL }}images/tw.png" alt="" /></a>
-                </td>
+                {% if LANGUAGE_CODE == 'ru' %}
+                    <td class="f1">
+                        <span>{% trans "архитектурная студия" %}</span><br />
+                        <span>{% trans "дизайн интерьеров, феншуй" %}</span>
+                    </td>
+                    <td class="f2">
+                        <span>054-493-0558</span><br />
+                        <span class="email">
+                            <a href="mailto:mr@studiogen.co.il">mr@studiogen.co.il</a>
+                        </span>
+                    </td>
+                    <td class="f3">
+                        {% trans "© 2012 Studio Gen, All Rights Reserved. Legal Information" %}
+                    </td>
+                {% endif %}
+                {% if LANGUAGE_CODE == 'he' %}
+                    <td class="f3">
+                        {% trans "© 2012 Studio Gen, All Rights Reserved. Legal Information" %}
+                    </td>
+                    <td class="f2">
+                        <span>054-493-0558</span><br />
+                        <span class="email">
+                            <a href="mailto:mr@studiogen.co.il">mr@studiogen.co.il</a>
+                        </span>
+                    </td>
+                    <td class="f1">
+                        <span>{% trans "עיצוב פנים ∞ אדריכלות ∞ ייעוץ פנג שואי" %}</span>
+                    </td>
+                {% endif %}
+
+                {#<td class="f4">#}
+                {#    <a href="#"><img src="{{ STATIC_URL }}images/fb.png" alt="" /></a>#}
+                {#    <a href="#"><img src="{{ STATIC_URL }}images/tw.png" alt="" /></a>#}
+                {#</td>#}
             </tr>
         </table>
     </div>

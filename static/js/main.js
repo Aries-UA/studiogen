@@ -127,17 +127,79 @@ var Imgs = {
     go: function(id) {
         setInterval('Imgs.view("'+id+'")', 3000);
     }
-}
+};
+
+var ONLY_HOME = false;
+
+var bgSlide = {
+    current: 4,
+    lock: false,
+    images: [
+        '/static/images/bg/bg1.jpg',
+        '/static/images/bg/bg2.jpg',
+        '/static/images/bg/bg3.jpg',
+        '/static/images/bg/bg4.jpg',
+        '/static/images/bg/bg5.jpg'
+    ],
+    slideId: 'slidebox',
+    contentId: 'content_body',
+    sleep: 2000,
+    hide: function(box) {
+        var self = this;
+        box.fadeOut(self.sleep);
+    },
+    set_bg: function(box) {
+        var self = this;
+        var img_old = this.images[this.current];
+        this.current = this.current + 1;
+        if (this.current >= (this.images.length - 1)) {
+            this.current = 0;
+        }
+        var img_new = this.images[this.current];
+        box.css({'background': 'url(' + img_old + ') top center no-repeat'});
+        $('#' + self.contentId).css({'background': 'url(' + img_new + ') top center no-repeat'});
+        return box
+    },
+    create_box: function() {
+        var self = this;
+        var cb = $('#' + self.contentId);
+        var w = cb.width();
+        var h = cb.height();
+        var box = $('<div></div>');
+        $('#' + self.slideId).remove();
+        box.attr('class', self.slideId)
+           .attr('id', self.slideId)
+           .width(w)
+           .height(h)
+           .css({'top': '0px', 'left': '0px'});
+        return box;
+    },
+    remove_box: function() {
+        var self = this;
+        $('#' + self.slideId).remove();
+    },
+    slide: function() {
+        var self = this;
+        if (!self.lock && ONLY_HOME) {
+            self.lock = true;
+            var box = this.create_box();
+            box = self.set_bg(box);
+            $('#' + self.contentId).append(box);
+            self.hide(box);
+            self.lock = false;
+        }
+    }
+};
 
 $(document).ready(function(){
-	if ($("#content div.fengshui_bg").length >0) {
+	if ($("#content div.fengshui_bg").length > 0) {
   		$('.fengshui_bg').bgStretcher({
 			images:["/images/fengshui-bg.jpg"],
 			slideShow:false
 		}); 
 	}
 
-	if ($("#content div.contacts-page").length >0) {
+	if ($("#content div.contacts-page").length > 0) {
         $('#content div.contacts-page').bgStretcher({
             images:["/images/contacts-bg.jpg"],
             slideShow:false
@@ -149,6 +211,18 @@ $(document).ready(function(){
     if ($('#id_news_image').length > 0) {
         slide.init();
     }
+
+    setTimeout(
+        function() {
+            console.log(111);
+            setInterval(
+                function() {
+                    bgSlide.slide();
+                }, 
+                5000);
+        },
+        50
+    );
 
 });
 

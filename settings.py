@@ -182,7 +182,8 @@ PATH_GALLERY = ''.join([MEDIA_ROOT, NAME_GALLERY])
 IMAGE_SIZE = [
     {'w': 140, 'h': 100, 'crop': True, 'preview_admin': True},
     {'w': 103, 'h': 62, 'crop': True, 'preview_admin': False},
-    {'w': 600, 'h': 400, 'crop': False, 'preview_admin': False},
+    {'w': 740, 'h': 494, 'crop': False, 'preview_admin': False},
+    {'w': 250, 'h': 150, 'crop': True, 'preview_admin': False},
 ]
 
 EMAIL_FROM = 'aries.ua@gmail.com'
