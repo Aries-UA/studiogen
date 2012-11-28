@@ -214,7 +214,6 @@ $(document).ready(function(){
 
     setTimeout(
         function() {
-            console.log(111);
             setInterval(
                 function() {
                     bgSlide.slide();
