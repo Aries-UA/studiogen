@@ -254,6 +254,18 @@ a {
 .bg5 {
     background: url(../images/bg/bg5.jpg) 100% 100% no-repeat;
 }
+.bg6 {
+    background: url(../images/bg/bg6.jpg) 100% 100% no-repeat;
+}
+.bg7 {
+    background: url(../images/bg/bg7.jpg) 100% 100% no-repeat;
+}
+.bg8 {
+    background: url(../images/bg/bg8.jpg) 100% 100% no-repeat;
+}
+.bg9 {
+    background: url(../images/bg/bg9.jpg) 100% 100% no-repeat;
+}
 
 /* ------------------------------ */
 /* ----------- CONTENT ---------- */
@@ -307,10 +319,10 @@ a {
     padding: 20px;
     margin-right: 45px;
     background-color: #090908;
-    color: #efefef;
+    color: #8000FF;
     text-align: left;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     border: 1px solid #c3c43a;
     font-size: 14px;
     position: relative;
@@ -338,7 +350,8 @@ a {
 
 #div_img {
     padding-top: 20px;
-    width: 750px;
+    width: 745px;
+    text-align: center;
 }
 
 #div_img img {

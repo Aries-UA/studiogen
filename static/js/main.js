@@ -132,14 +132,18 @@ var Imgs = {
 var ONLY_HOME = false;
 
 var bgSlide = {
-    current: 4,
+    current: 0,
     lock: false,
     images: [
-        '/static/images/bg/bg1.jpg',
+        /*'/static/images/bg/bg1.jpg',
         '/static/images/bg/bg2.jpg',
         '/static/images/bg/bg3.jpg',
         '/static/images/bg/bg4.jpg',
-        '/static/images/bg/bg5.jpg'
+        '/static/images/bg/bg5.jpg'*/
+        '/static/images/bg/bg6.jpg',
+        '/static/images/bg/bg7.jpg',
+        '/static/images/bg/bg8.jpg',
+        '/static/images/bg/bg9.jpg'
     ],
     slideId: 'slidebox',
     contentId: 'content_body',
