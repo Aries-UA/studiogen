@@ -40,6 +40,7 @@ a {
     min-width: 1245px;
     border-bottom: 4px solid #6d6d6d;
     background: #000000;
+    min-width: 1365px;
 }
 
 #header .logo {
