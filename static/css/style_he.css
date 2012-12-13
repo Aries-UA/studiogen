@@ -9,7 +9,7 @@
 }
 
 #header .menu {
-    padding: 48px 0 0 72px !important;
+    padding: 32px 28px 0 72px !important;
 }
 
 #header .menu td {
@@ -21,11 +21,7 @@
 }
 
 #sidebar h1 {
-    padding: 168px 0 20px 85px !important;
-}
-
-#sidebar .dotline {
-    left: 66px !important;
+    padding: 168px 60px 20px 0px !important;
 }
 
 .sidebar_block {

@@ -2,10 +2,25 @@
 {% load i18n %}
 <table class="menu {{ 'left'|style }}">
     <tr>
+    {% if LANGUAGE_CODE == 'he' %}
+        <td style="padding-top: 14px;">
+            <a href="javascript: void(0);" onclick="LANG.set('ru');" style="font-size: 15px;">
+                Русский
+            </a>
+        </td>
+    {% endif %}
     {% for menu in menus %}
-        <td align="center" width="{{ td_width }}%">
-            <b><a href="{{ menu.url }}">{{ menu.name }}</a></b>
+        <!--<td align="center" width="{{ td_width }}%">-->
+        <td>
+            <a href="{{ menu.url }}">{{ menu.name }}</a>
         </td>
     {% endfor %}
+    {% if LANGUAGE_CODE == 'ru' %}
+        <td style="padding-top: 6px !important;">
+            <a href="javascript: void(0);" onclick="LANG.set('he');" style="font-size: 25px;">
+                עברית
+            </a>
+        </td>
+    {% endif %}
     </tr>
 </table>
