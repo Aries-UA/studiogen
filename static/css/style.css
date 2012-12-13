@@ -323,7 +323,7 @@ a {
     text-align: left;
     line-height: 24px;
     margin-bottom: 100px;
-    border: 1px solid #c3c43a;
+    border: 1px solid #ffffff;
     font-size: 14px;
     position: relative;
     z-index: 10000;
@@ -332,7 +332,7 @@ a {
 .black_block h1 {
     text-transform: uppercase;
     font: 18px Arial, Helvetica, sans-serif;
-    color: #c3c43a;
+    color: #ffffff;
     width: 100%;
     text-align: center;
 }
