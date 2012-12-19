@@ -143,7 +143,9 @@ var bgSlide = {
         '/static/images/bg/bg6.jpg',
         '/static/images/bg/bg7.jpg',
         '/static/images/bg/bg8.jpg',
-        '/static/images/bg/bg9.jpg'
+        '/static/images/bg/bg9.jpg',
+        '/static/images/bg/bg10.jpg',
+        '/static/images/bg/bg11.jpg'
     ],
     slideId: 'slidebox',
     contentId: 'content_body',
@@ -169,7 +171,7 @@ var bgSlide = {
         var cb = $('#' + self.contentId);
         var w = cb.width();
         var h = cb.height();
-        var box = $('<div></div>');
+        var box = $('<div />');
         $('#' + self.slideId).remove();
         box.attr('class', self.slideId)
            .attr('id', self.slideId)

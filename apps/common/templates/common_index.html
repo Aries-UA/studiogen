@@ -9,3 +9,13 @@
         
     </script>
 {% endblock %}
+
+{% block empty %}
+    <object type="application/x-shockwave-flash" data="/static/swf/play.swf" height="375" width="500">
+        <param name="bgcolor" value="#000000" />
+        <param name="allowFullScreen" value="true" />
+        <param name="allowScriptAccess" value="always" />
+        <param name="movie" value="/media/video/m1.flv" />
+        <param name="FlashVars" value="way=/media/video/m1.flv&swf=/static/swf/play.swf&w=500&h=375&pic=http://&autoplay=1&replay=1&tools=2&skin=black&volume=80&q=1&comment=" />
+    </object>
+{% endblock %}
