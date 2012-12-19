@@ -3,6 +3,7 @@
 from settings import *
 from django.shortcuts import render
 from django.template import RequestContext, loader
+from django.utils import translation
 
 from apps.gallery.models import Albums, Gallery
 
@@ -29,5 +30,6 @@ def album(request):
         'albums': Albums.objects.all(),
         'gallery': gallery,
         'big': big,
+        'LANGUAGE_CODE': translation.get_language(),
     }
     return render(request, 'gallery_albums.html', data)
