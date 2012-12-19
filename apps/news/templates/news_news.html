@@ -52,7 +52,11 @@
                         <div class="preview">
                             {{ one.short_name }}
                             <br />
-                            <a href="{% url one_news news_id=one.id %}">{% trans "Далее" %}...</a>
+                            {% if LANGUAGE_CODE == "ru" %}
+                                <a href="{% url one_news news_id=one.id %}">{% trans "Далее" %}...</a>
+                            {% else %}
+                                <a href="{% url one_news news_id=one.id %}">{% trans "עוד" %}...</a>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="clear"></div>
