@@ -6,7 +6,11 @@
 	<div id="content_body" class="bg1">
         <div id="sidebar" class="div_transp {{ 'left'|style }}">
             <div class="dotline right"></div>
-            <h1>{% trans "новости" %}</h1>
+            {% if LANGUAGE_CODE == "ru" %}
+                <h1>{% trans "новости" %}</h1>
+            {% else %}
+                <h1>{% trans "חדשות" %}</h1>
+            {% endif %}
             <div class="sidebar_block block_transp">
                 <div class="bottom_line"></div>
             </div>
