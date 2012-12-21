@@ -53,8 +53,8 @@ class BaseForm(forms.Form):
 class ContactForm(BaseForm):
 
     email = forms.EmailField(label=_(u'Email'), min_length=3, max_length=100, required=True, initial='')
-    title = forms.CharField(label=_(u"Тема"), min_length=5, max_length=100, required=True, initial='')
-    message = forms.CharField(label=_(u"Сообщение"), widget=forms.Textarea, min_length=5, max_length=500, required=True, initial='')
+    title = forms.CharField(label=_(u"Subject"), min_length=5, max_length=100, required=True, initial='')
+    message = forms.CharField(label=_(u"Message"), widget=forms.Textarea, min_length=5, max_length=500, required=True, initial='')
     captcha = CaptchaField()
 
     def clean_title(self):

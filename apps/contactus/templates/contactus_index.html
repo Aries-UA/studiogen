@@ -6,7 +6,11 @@
 	<div id="content_body" class="bg1">
         <div id="sidebar" class="div_transp {{ 'left'|style }}">
             <div class="dotline right"></div>
-            <h1 style="font-size: 36px !important;">{% trans "написать" %}</h1>
+            {% if LANGUAGE_CODE == "ru" %}
+                <h1 style="font-size: 36px !important;">{% trans "написать" %}</h1>
+            {% else %}
+                <h1 style="font-size: 36px !important;">{% trans "צור קשר" %}</h1>
+            {% endif %}
             <div class="sidebar_block block_transp">
                 <div class="bottom_line"></div>
             </div>
@@ -24,7 +28,7 @@
                         {{ form }}
                         <tr>
                             <td colspan="2" align="right">
-                                <input type="submit" value="{% trans "Отправить" %}">
+                                <input type="submit" value="{% trans "Submit" %}">
                             </td>
                         </tr>
                     </table>

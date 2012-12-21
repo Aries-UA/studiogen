@@ -8,6 +8,7 @@ from django.core.urlresolvers import reverse
 from django.core.mail import EmailMessage
 from django.utils.translation import ugettext as _
 from apps.contactus.forms import ContactForm
+from django.utils import translation
 
 def contact(request):
     message = False
@@ -32,5 +33,6 @@ def contact(request):
     data = {
         'form': form,
         'message': message,
+        'LANGUAGE_CODE': translation.get_language(),
     }
     return render(request, 'contactus_index.html', data)
