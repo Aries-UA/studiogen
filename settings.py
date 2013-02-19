@@ -186,7 +186,13 @@ IMAGE_SIZE = [
     {'w': 250, 'h': 150, 'crop': True, 'preview_admin': False},
 ]
 
-EMAIL_FROM = 'aries.ua@gmail.com'
+#python -m smtpd -n -c DebuggingServer localhost:1025
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+EMAIL_FROM = ''
 
 CKEDITOR_UPLOAD_PATH = '/home/projects/media/images'
 
