@@ -23,7 +23,7 @@ def contact(request):
             t = loader.get_template('contactus_mail.html')
             c = RequestContext(request, data)
             html = t.render(c)
-            msg = EmailMessage(_(u'Контактная форма'), html, send_data['email'], [EMAIL_FROM])
+            msg = EmailMessage(_(u'Контактная форма'), html, send_data['email'], [EMAIL_TO])
             msg.content_subtype = "html"
             msg.send()
             message = _(u'Спасибо, что написали нам!')

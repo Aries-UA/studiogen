@@ -193,6 +193,7 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 EMAIL_FROM = ''
+EMAIL_TO = ''
 
 CKEDITOR_UPLOAD_PATH = '/home/projects/media/images'
 
